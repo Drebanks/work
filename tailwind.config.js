@@ -15,6 +15,7 @@ module.exports = {
     },
     colors: {
       "border": "rgba(1, 69, 254, 0.2)",
+      "shade": "#FAFAFE",
       "lightGren": "rgba(31, 193, 136, 0.60)",
       "white":"#FFFFFF",
       "black": "#222222",

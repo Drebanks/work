@@ -4,7 +4,10 @@ import Tablecontent from '@/components/dash/table';
 
 const Dashboard = () => {
   return (
-    <DashboardLayout>
+      <DashboardLayout>
+        <div className="pt-20">
+          <p className="tex-[24px] font-bold">Welcome, Toluwalope!</p>
+        </div>
           <Tablecontent/>
     </DashboardLayout>
   )
