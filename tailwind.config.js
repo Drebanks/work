@@ -21,6 +21,8 @@ module.exports = {
       "thinGrey": "#616464",
       "red": "#EB4335",
       "blue": '#1FC188',
+      "deepBlue": "#213F7D",
+      "gray": "#545F7D",
     },
   },
   plugins: [],

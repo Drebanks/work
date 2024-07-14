@@ -1,8 +1,6 @@
 import React, {useState} from "react";
-import { useRouter } from 'next/navigation';
 import ModalLayout from "@/components/layout/modal";
-import Image from "next/image";
-import Button from "@/components/UI/Button/button";
+
 
 const AddItems = ({ item = {}, onSubmit, onClose }) => {
   const [name, setName] = useState(item.name || "");
@@ -10,7 +8,8 @@ const AddItems = ({ item = {}, onSubmit, onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({ ...item, name, description });
+      onSubmit({ ...item, name, description });
+      onClose();
   };
 
   return (
@@ -25,7 +24,7 @@ const AddItems = ({ item = {}, onSubmit, onClose }) => {
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="border border-gray-300 py-2 px-4 w-full"
+            className="border border-gray py-2 rounded-[8px] px-4 w-full text-blue"
           />
         </div>
         <div className="mb-4">
@@ -34,7 +33,7 @@ const AddItems = ({ item = {}, onSubmit, onClose }) => {
             type="text"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            className="border border-gray-300 py-2 px-4 w-full"
+            className="border border-gray rounded-[8px] py-2 px-4 w-full text-blue"
           />
         </div>
         <div className="flex justify-end">

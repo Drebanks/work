@@ -63,10 +63,10 @@ const Login = () => {
                 <Image src={Diagram} alt=""/>
 
             </div>
-            <div className="w-1/2 h-full flex flex-start items-center p-[0px_50px] bg-thinGrey">
+            <div className="w-1/2 h-full flex flex-start items-center p-[0px_50px] bg-white shadow-[0px_15px_90px_0px_rgba(0,0,0,0.03)]">
                 <div>
-                    <p>Welcome!</p>
-                    <p>Enter your details to login</p>
+                    <p className='text-deepBlue text-[40px] font-bold '>Welcome!</p>
+                    <p className='text-gray text-[20px]'>Enter your details to login</p>
                     <form>
                         {loginData.map((item, i) => (
                             <Input

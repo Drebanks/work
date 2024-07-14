@@ -6,7 +6,7 @@ const DashboardLayout = ({ children }) => {
       <aside className="bg-blue w-full max-w-[300px]">
         <SidebarItems />
       </aside>
-      <main className="bg-[#F6F6F6] overflow-y-auto flex-1">{children}</main>
+      <main className="bg-[#F6F6F6] overflow-y-auto flex-1 p-4">{children}</main>
     </div>
   );
 };

@@ -3,11 +3,12 @@ import ModalLayout from "@/components/layout/modal";
 
 
 const Delete = ({ item, onDelete, onClose }) => {
+    if (!item) return null;
   return (
     <ModalLayout>
       <div className="p-4">
         <h2 className="text-lg font-bold mb-4">Delete Item</h2>
-        <p>Are you sure you want to delete {item.name}?</p>
+        <p>Are you sure you want to delete {item.name}</p>
         <div className="flex justify-end mt-4">
           <button
             type="button"

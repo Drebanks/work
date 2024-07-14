@@ -92,3 +92,7 @@
   border-color: var(--gold);
   background-color: var(--gold);
 }
+
+.filter{
+  filter: invert(58%) sepia(93%) saturate(358%) hue-rotate(107deg) brightness(88%) contrast(93%)
+}

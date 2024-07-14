@@ -1,15 +1,27 @@
-import { useRouter } from "next/navigation";
+import React, { useState, useEffect } from "react";
 import ModalLayout from "@/components/layout/modal";
 
-
 const EditItems = ({ item = {}, onSubmit, onClose }) => {
-  const [name, setName] = useState(item.name || "");
-  const [description, setDescription] = useState(item.description || "");
+  // State to hold name and description
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
 
+  // Effect to update state when item changes
+  useEffect(() => {
+    if (item) {
+      setName(item.name || "");
+      setDescription(item.description || "");
+    }
+  }, [item]);
+
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit({ ...item, name, description });
   };
+
+  // Guard against null or undefined item
+  if (!item) return null;
 
   return (
     <ModalLayout>
@@ -23,7 +35,7 @@ const EditItems = ({ item = {}, onSubmit, onClose }) => {
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="border border-gray-300 py-2 px-4 w-full"
+            className="border border-gray rounded-[8px] py-2 px-4 w-full text-blue"
           />
         </div>
         <div className="mb-4">
@@ -32,7 +44,7 @@ const EditItems = ({ item = {}, onSubmit, onClose }) => {
             type="text"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            className="border border-gray-300 py-2 px-4 w-full"
+            className="border border-gray rounded-[8px] py-2 px-4 w-full text-blue"
           />
         </div>
         <div className="flex justify-end">
