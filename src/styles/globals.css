@@ -96,3 +96,15 @@
 .filter{
   filter: invert(58%) sepia(93%) saturate(358%) hue-rotate(107deg) brightness(88%) contrast(93%)
 }
+
+
+.bots {
+  position: absolute;
+  left: 0;
+  top: 5rem;
+  border: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid blueviolet;
+  border-radius: 50%;
+}
