@@ -147,7 +147,7 @@ const Tablecontent = () => {
   ];
 
   const [filteredItems, setFilteredItems] = useState(initialItems);
-  const [currentItem, setCurrentItem] = useState(null);
+  const [currentItem, setCurrentItem] = useState(null); 
   const [modalType, setModalType] = useState("");
     const [selected, setSelected] = useState("default");
   

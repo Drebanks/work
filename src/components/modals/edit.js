@@ -8,7 +8,6 @@
         const [email, setEmail] = useState(item.email || "");
         const [gender, setGender] = useState(item.gender || "");
 
-    // Effect to update state when item changes
      useEffect(() => {
        if (item) {
          setFirstName(item.firstName || "");
